@@ -1,0 +1,11 @@
+.registration-form{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    justify-content: center;
+    margin: auto;
+    margin-top: 50px;
+    input {
+        margin-bottom: 20px;
+    }
+}
