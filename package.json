@@ -12,7 +12,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://loise.github.io/ci-cd-ynov",
+  "homepage": "https://cormorecheleo.github.io/ci-cd/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
