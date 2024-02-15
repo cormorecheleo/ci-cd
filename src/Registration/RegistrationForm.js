@@ -49,6 +49,9 @@ const RegistrationForm = () => {
 
   return (
     <div className="registration-form">
+      {errors.firstName && (
+        <div className="error-message">{errors.firstName}</div>
+      )}
       <input
         type="text"
         name="firstName"
@@ -56,10 +59,11 @@ const RegistrationForm = () => {
         onChange={handleInputChange}
         placeholder="First Name"
       />
-      {errors.firstName && (
-        <div className="error-message">{errors.firstName}</div>
-      )}
+      
 
+      {errors.lastName && (
+        <div className="error-message">{errors.lastName}</div>
+      )}
       <input
         type="text"
         name="lastName"
@@ -67,10 +71,8 @@ const RegistrationForm = () => {
         onChange={handleInputChange}
         placeholder="Last Name"
       />
-      {errors.lastName && (
-        <div className="error-message">{errors.lastName}</div>
-      )}
-
+      
+      {errors.email && <div className="error-message">{errors.email}</div>}
       <input
         type="text"
         name="email"
@@ -78,8 +80,10 @@ const RegistrationForm = () => {
         onChange={handleInputChange}
         placeholder="Email"
       />
-      {errors.email && <div className="error-message">{errors.email}</div>}
 
+      {errors.dateOfBirth && (
+        <div className="error-message">{errors.dateOfBirth}</div>
+      )}
       <input
         type="date"
         name="dateOfBirth"
@@ -87,9 +91,7 @@ const RegistrationForm = () => {
         onChange={handleInputChange}
         placeholder="Date of Birth"
       />
-      {errors.dateOfBirth && (
-        <div className="error-message">{errors.dateOfBirth}</div>
-      )}
+      
 
       <input
         type="text"
@@ -99,6 +101,9 @@ const RegistrationForm = () => {
         placeholder="City"
       />
 
+      {errors.postalCode && (
+        <div className="error-message">{errors.postalCode}</div>
+      )}
       <input
         type="text"
         name="postalCode"
@@ -106,14 +111,12 @@ const RegistrationForm = () => {
         onChange={handleInputChange}
         placeholder="Postal Code"
       />
-      {errors.postalCode && (
-        <div className="error-message">{errors.postalCode}</div>
-      )}
+      
 
-      <button onClick={handleSubmit} disabled={isButtonDisabled}>
-        Save
+      <button onClick={handleSubmit} disabled={isButtonDisabled} className={isButtonDisabled ? "neutralButton" : !isButtonDisabled ? "validButton" : ""}>
+        SAVE
       </button>
-      <Toaster errors={errors} />
+      {/* <Toaster errors={errors} /> */}
     </div>
   );
 };

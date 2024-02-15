@@ -5,6 +5,7 @@ beforeEach(() => {
     people20years = {
         birth: new Date(date.setFullYear(date.getFullYear() - 20))
     };
+    console.log(people20years);
 })
 /**
 * @function calculateAge
@@ -17,4 +18,4 @@ describe('calculateAge Unit Test Suites', () => {
     it('should throw a "missing param p" error', () => {
         expect(() => calculateAge()).toThrow("missing param p")
     })
-})
+});
