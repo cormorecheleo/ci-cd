@@ -49,3 +49,8 @@ jobs:
     
     # Add a dependency to the build job
     needs: build_test
+    # Specify runner + deployment step
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
